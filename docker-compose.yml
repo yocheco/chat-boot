@@ -21,7 +21,7 @@ services:
 
   db:
     env_file: .env
-    image: mongo:4.4.1
+    image: mongo:bionic
     container_name: db_mongo
     restart: always
     expose:
