@@ -1,0 +1,36 @@
+version: "3.7"
+services:
+  node:
+    build:
+      context: ./src
+      dockerfile: Dockerfile
+    env_file: .env
+    image: boot_001
+    container_name: boot_cc
+    restart: always
+    expose:
+      - $PORT
+    volumes:
+      - ./services/boot/bot_sessions:/app/bot_sessions
+    ports:
+      - $PORT:$PORT
+    depends_on:
+      - db
+    networks:
+      - bot_dev
+
+  db:
+    env_file: .env
+    image: mongo:4.4.1
+    container_name: db_mongo
+    restart: always
+    expose:
+      - 20017
+    volumes:
+      - ./services/mongo/db-data-prod:/data/db
+    networks:
+      - bot_dev
+
+networks:
+  bot_dev:
+    driver: bridge

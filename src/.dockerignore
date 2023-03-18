@@ -1,0 +1,9 @@
+# 🐸 mongo
+services
+node_modules
+
+# 🤖 Boot
+bot.qr.png
+core.class.log
+baileys.log
+bot_sessions

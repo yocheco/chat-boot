@@ -1,0 +1,17 @@
+# 🤖 Boot
+src/bot.qr.png
+src/core.class.log
+src/baileys.log
+src/bot_sessions
+
+services/boot/bot_sessions/*
+
+# 🟩 Node
+node_modules
+
+# 🐸 mongo
+services/mongo/db-data/*
+services/mongo/db-data-prod/*
+
+# 🐋 Docker
+.env
