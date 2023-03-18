@@ -5,6 +5,7 @@ src/baileys.log
 src/bot_sessions
 
 services/boot/bot_sessions/*
+!services/boot/bot_sessions/.gitkeep
 
 # 🟩 Node
 node_modules
